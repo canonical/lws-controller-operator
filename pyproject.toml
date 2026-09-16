@@ -55,14 +55,14 @@ tenacity = "^9.1.2"
 optional = true
 
 [tool.poetry.group.fmt.dependencies]
-black = "^25.1.0"
+black = "^26.3.1"
 isort = "^6.0.1"
 
 [tool.poetry.group.lint]
 optional = true
 
 [tool.poetry.group.lint.dependencies]
-black = "^25.1.0"
+black = "^26.3.1"
 codespell = "^2.4.1"
 flake8 = "^7.0.0"
 flake8-builtins = "^2.5.0"
