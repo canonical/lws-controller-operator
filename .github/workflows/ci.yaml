@@ -70,7 +70,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        charm: [kserve-controller, kserve-llmisvc, lws-controller, llm-integrator]
+        charm: [lws-controller]
     steps:
       - uses: actions/checkout@v4
       - run: pipx install tox
@@ -98,7 +98,7 @@ jobs:
     uses: canonical/data-platform-workflows/.github/workflows/build_charm.yaml@v51.0.0
     with:
       path-to-charm-directory: ${{ matrix.charm }}
-      cache: true
+      cache: false
     permissions:
       actions: read  # Needed for GitHub API call to get workflow version (for private repositories)
       contents: read
