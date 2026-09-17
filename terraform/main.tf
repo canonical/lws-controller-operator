@@ -5,10 +5,11 @@ resource "juju_application" "lws_controller" {
     channel  = var.channel
     revision = var.revision
   }
-  config    = var.config
-  model     = var.model_name
-  name      = var.app_name
-  resources = var.resources
-  trust     = true
-  units     = 1
+  config      = var.config
+  constraints = var.constraints
+  model_uuid  = var.model_uuid
+  name        = var.app_name
+  resources   = var.resources
+  trust       = var.trust
+  units       = var.units
 }

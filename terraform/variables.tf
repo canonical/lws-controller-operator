@@ -22,9 +22,16 @@ variable "config" {
   default     = {}
 }
 
-variable "model_name" {
-  description = "Model name"
+variable "constraints" {
+  description = "Juju constraints applied to the application"
   type        = string
+  default     = "arch=amd64"
+}
+
+variable "model_uuid" {
+  description = "UUID of the model that the charm is deployed on"
+  type        = string
+  nullable    = false
 }
 
 variable "resources" {
@@ -37,4 +44,16 @@ variable "revision" {
   description = "Charm revision"
   type        = number
   default     = null
+}
+
+variable "trust" {
+  description = "Whether the application is granted access to the Kubernetes cluster"
+  type        = bool
+  default     = true
+}
+
+variable "units" {
+  description = "Number of units to deploy"
+  type        = number
+  default     = 1
 }
