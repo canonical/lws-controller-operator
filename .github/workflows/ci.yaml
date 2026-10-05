@@ -98,7 +98,7 @@ jobs:
     uses: canonical/data-platform-workflows/.github/workflows/build_charm.yaml@v53.0.0
     with:
       path-to-charm-directory: ${{ matrix.charm }}
-      cache: false
+      cache: true
     permissions:
       actions: read  # Needed for GitHub API call to get workflow version (for private repositories)
       contents: read
